@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forming Sentences</title>
+        <script src="simulation.js"></script>
+        <style>
+            *{
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Forming Sentences</h1>
+        <select id="language" onchange="genRandom()">
+            <option value="">---Select Language---</option>
+            <option value="eng">English</option>
+            <option value="hin">Hindi</option>
+        </select>
+        <h3>Form sentence using those buttons</h3>
+        <p id="op"></p>
+        <div id="english_content"></div>
+        <div id="hindi_content"></div>
+    </body>
+</html>
