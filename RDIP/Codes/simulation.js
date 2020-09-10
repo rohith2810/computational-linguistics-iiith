@@ -57,7 +57,7 @@ function showContentEng(){
             buttons1[i].type="button";
             buttons1[i].value=ranList[i];
             buttons1[i].onclick=function(){
-                h.innerHTML="Formed Sentence";
+                h.innerHTML="Formed Sentence(After Selecting words)";
                 count+=1;
                 d.append(h);
                 var str=sp.innerHTML;
@@ -150,7 +150,7 @@ function showContentHin(){
         buttons2[i].type="button";
         buttons2[i].value=ranList[i];
         buttons2[i].onclick=function(){
-            h.innerHTML="Formed Sentence";
+            h.innerHTML="Formed Sentence(After Selecting words)";
             count+=1;
             d.append(h);
             var str=sp.innerHTML;
