@@ -7,6 +7,7 @@ function isPresent(array,element){
     return false;
 }
 function showContentEng(){
+    //buttons2.splice(0,buttons2.length);
     var corpusEng=[["John ate an apple before afternoon","before afternoon John ate an apple","John before afternoon ate an apple"],
             ["some students like to study in the night","at night some students like to study"],
             ["John and Mary went to church","Mary and John went to church"],
@@ -29,7 +30,9 @@ function showContentEng(){
         let buttons1=[];
         var d=document.getElementById("english_content");
         var h=document.createElement("h3");
+        h.className="text-secondary";
         var sp=document.createElement("h2");
+        sp.className="text-primary";
         var reForm=document.createElement("input");
         var checkSentence=document.createElement("input");
         var ans=document.createElement("h1");
@@ -48,14 +51,20 @@ function showContentEng(){
         }
         reForm.type="button";
         reForm.value="Reform Sentence";
+        reForm.className="btn btn-dark";
         checkSentence.type="button";
+        checkSentence.className="btn btn-dark";
         checkSentence.value="Check Correctness";
+        btnGroup=document.createElement("div");
+        btnGroup.className="btn-group";
+        d.append(btnGroup);
         for(i=0;i<ranList.length;i++)
             buttons1.push(0);
         for(i=0;i<ranList.length;i++){
             buttons1[i]=document.createElement("input");
             buttons1[i].type="button";
             buttons1[i].value=ranList[i];
+            buttons1[i].className="btn btn-info";
             buttons1[i].onclick=function(){
                 h.innerHTML="Formed Sentence(After Selecting words)";
                 count+=1;
@@ -73,12 +82,13 @@ function showContentEng(){
                 reForm.style.display="inline";
                 this.style.display="none";
             }
-            d.appendChild(buttons1[i]);
+            btnGroup.appendChild(buttons1[i]);
         }
         checkSentence.onclick=function(){
             var sentence=sp.innerHTML;
             show.type="button";
             show.value="Get Correct Sentence(s)";
+            show.className="btn btn-dark";
             if(isPresent(crct,sentence)){
                 ans.innerHTML="Correct Answer";
                 ans.style.color="green";
@@ -98,7 +108,9 @@ function showContentEng(){
                 answers.innerHTML+=crct[i]+"<br>";
             }
             d.append(answers);
+            answers.className="text-success";
             answers.style.display="block";
+            this.disabled="true";
         }
 }
 function showContentHin(){
@@ -122,7 +134,9 @@ function showContentHin(){
     let buttons2=[];
     var d=document.getElementById("hindi_content");
     var h=document.createElement("h3");
+    h.className="text-secondary";
     var sp=document.createElement("h2");
+    sp.className="text-primary";
     var reForm=document.createElement("input");
     var checkSentence=document.createElement("input");
     var ans=document.createElement("h1");
@@ -141,14 +155,20 @@ function showContentHin(){
     }
     reForm.type="button";
     reForm.value="Reform Sentence";
+    reForm.className="btn btn-dark";
     checkSentence.type="button";
     checkSentence.value="Check Correctness";
+    checkSentence.className="btn btn-dark";
+    btnGroup=document.createElement("div");
+    btnGroup.className="btn-group";
+    d.append(btnGroup);
     for(i=0;i<ranList.length;i++)
         buttons2.push(0);
     for(i=0;i<ranList.length;i++){
         buttons2[i]=document.createElement("input");
         buttons2[i].type="button";
         buttons2[i].value=ranList[i];
+        buttons2[i].className="btn btn-info";
         buttons2[i].onclick=function(){
             h.innerHTML="Formed Sentence(After Selecting words)";
             count+=1;
@@ -166,12 +186,13 @@ function showContentHin(){
             reForm.style.display="inline";
             this.style.display="none";
         }
-        d.appendChild(buttons2[i]);
+        btnGroup.appendChild(buttons2[i]);
     }
     checkSentence.onclick=function(){
         var sentence=sp.innerHTML;
         show.type="button";
         show.value="Get Correct Sentence(s)";
+        show.className="btn btn-dark";
         if(isPresent(crct,sentence)){
             ans.innerHTML="Correct Answer";
             ans.style.color="green";
@@ -192,6 +213,8 @@ function showContentHin(){
         }
         d.append(answers);
         answers.style.display="block";
+        answers.className="text-success";
+        this.disabled="true";
     }
 }
 function genRandom(){

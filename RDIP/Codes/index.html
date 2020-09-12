@@ -3,25 +3,26 @@
     <head>
         <title>Forming Sentences</title>
         <script src="simulation.js"></script>
-        <style>
-            *{
-                text-align:center;
-            }
-            h2{
-                color: blue;
-            }
-        </style>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <h1>Forming Sentences</h1>
-        <select id="language" onchange="genRandom()">
+        <div class="text-center">
+        <h1 class="text-light bg-dark">Forming Sentences</h1>
+        <select id="language" onchange="genRandom()" class="btn-sm dropdown-toggle">
             <option value="">---Select Language---</option>
             <option value="eng">English</option>
             <option value="hin">Hindi</option>
         </select>
-        <h3>Form a Sentence(Declarative or Interagative or any other type) form the given words (select the buttons in proper order)</h3>
+        <h3 class="text-secondary">Form a Sentence(Declarative or Interagative or any other type) form the given words (select the buttons in proper order)</h3>
         <p id="op"></p>
         <div id="english_content"></div>
         <div id="hindi_content"></div>
+        </div>
     </body>
 </html>
