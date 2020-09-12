@@ -26,7 +26,7 @@ function showContentEng(){
             ranList.push(list[ind])
             list.splice(ind,1);
         }
-        var buttons1=[];
+        let buttons1=[];
         var d=document.getElementById("english_content");
         var h=document.createElement("h3");
         var sp=document.createElement("h2");
@@ -119,7 +119,7 @@ function showContentHin(){
         ranList.push(list[ind])
         list.splice(ind,1);
     }
-    var buttons2=[];
+    let buttons2=[];
     var d=document.getElementById("hindi_content");
     var h=document.createElement("h3");
     var sp=document.createElement("h2");
@@ -197,27 +197,11 @@ function showContentHin(){
 function genRandom(){
     var lan=document.getElementById("language").value;
     if(lan=="eng"){
-        /*for(i=0;i<size;i++)
-                buttons[i].remove();
-            sp.remove();
-            this.remove();
-            ans.remove();
-            checkSentence.remove();
-            show.remove();
-            answers.remove();*/
         document.getElementById("hindi_content").style.display="none";
         document.getElementById("english_content").style.display="block";
         showContentEng();
     }
     else if(lan=="hin"){
-        /*for(i=0;i<size;i++)
-                buttons[i].remove();
-            sp.remove();
-            this.remove();
-            ans.remove();
-            checkSentence.remove();
-            show.remove();
-            answers.remove();*/
         document.getElementById("english_content").style.display="none";
         document.getElementById("hindi_content").style.display="block";
         showContentHin();
