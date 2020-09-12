@@ -78,7 +78,7 @@ function showContentEng(){
         checkSentence.onclick=function(){
             var sentence=sp.innerHTML;
             show.type="button";
-            show.value="Show Answer(s)";
+            show.value="Get Correct Sentence(s)";
             if(isPresent(crct,sentence)){
                 ans.innerHTML="Correct Answer";
                 ans.style.color="green";
@@ -171,7 +171,7 @@ function showContentHin(){
     checkSentence.onclick=function(){
         var sentence=sp.innerHTML;
         show.type="button";
-        show.value="Show Answer(s)";
+        show.value="Get Correct Sentence(s)";
         if(isPresent(crct,sentence)){
             ans.innerHTML="Correct Answer";
             ans.style.color="green";
