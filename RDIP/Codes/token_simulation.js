@@ -4,8 +4,14 @@ var corpus=['A mouse was having a very bad time. She could find no food at all. 
 function showCorpus(){
     var i=document.getElementById("corpus_select").value;
     i=parseInt(i);
-    if(i)
+    if(i){
         document.getElementById("corpus").innerHTML=corpus[i-1];
-    else
+        document.getElementById("text").style.display="inline";
+        document.getElementById("table").style.display="inline-block";
+    }
+    else{
         document.getElementById("corpus").innerHTML="";
+        document.getElementById("text").style.display="none";
+        document.getElementById("table").style.display="none";
+    }
 }
