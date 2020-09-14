@@ -4,9 +4,12 @@
         <script src="token_simulation.js"></script>
     </head>
     <body>
-        <p id="corpus1"></p>
-        <p id="corpus2"></p>
-        <p id="corpus3"></p>
-        <button onclick="showCorpus()">Show</button>
+        <select id="corpus_select" onchange="showCorpus()">
+            <option value="">---Select---</option>
+            <option value="1">Corpus1</option>
+            <option value="2">Corpus2</option>
+            <option value="3">Corpus3</option>
+        </select>
+        <p id="corpus"></p>
     </body>
 </html>
